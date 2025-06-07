@@ -7,11 +7,11 @@ const Hero = ({
   return (
     <>
         <section className='bg-indigo-700 min-h-[35vh] mx-auto w-full flex flex-col items-center justify-center mb-4'>
-          <div className='max-w-7xl h-full'>
-            <h1 className='text-white font-bold text-4xl sm:text-5xl md:text-6xl'>
+          <div className='h-full'>
+            <h1 className='text-center text-white font-bold text-3xl sm:text-4xl md:text-5xl'>
               {title}
             </h1>
-            <p className='text-center text-white text-sm md:text-xl py-1'>
+            <p className='text-center text-white text-sm md:text-lg py-2 tracking-tighter'>
               {subtitle}
             </p>
           </div>

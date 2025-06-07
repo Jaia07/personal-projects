@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
         <nav className='bg-indigo-700 border-b-2 border-indigo-500'>
-          <div className="flex justify-between max-w-7xl w-full mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between max-w-5xl w-full mx-auto px-2 sm:px-6 lg:px-8">
             <section className='flex items-center gap-1'>
               <img 
                 src={logo} 
