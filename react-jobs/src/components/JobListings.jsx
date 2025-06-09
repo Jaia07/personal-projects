@@ -7,7 +7,7 @@ const JobListings = () => {
         <div className='mx-auto max-w-[78rem]'>
             <h2 className='text-2xl text-indigo-500 text-center font-bold my-2'>Browse Jobs</h2>
             <div className='flex flex-col sm:flex-row items-stretch justify-center gap-4'>
-                <section className='border-2 bg-white px-3 py-4 rounded-lg shadow-md flex flex-col'>
+                <section className='bg-white px-3 py-4 rounded-lg shadow-md flex flex-col'>
                     <h3 className='text-gray-400'>Full-Time</h3>
                     <h4 className='text-lg font-bold mt-1 mb-4'>Senior React Developer</h4>
                     <p className='flex-grow'>We are seeking a talented Front-End Developer to join our team in Boston, MA. The ideal ca...</p>
@@ -19,12 +19,12 @@ const JobListings = () => {
                             <span><MdLocationOn /></span>
                             <span>Boston, MA</span>
                         </div>
-                        <button type="submit" className='border-1 bg-indigo-500 rounded-lg px-4 py-2 text-white hover:bg-indigo-600'>
+                        <button type="submit" className='bg-indigo-500 rounded-lg px-4 py-2 text-white hover:bg-indigo-600'>
                             Read More
                         </button>
                     </section>
                 </section>
-                <section className='border-2 bg-white px-3 py-4 rounded-lg shadow-md flex flex-col'>
+                <section className='bg-white px-3 py-4 rounded-lg shadow-md flex flex-col'>
                     <h3 className='text-gray-400'>Full-Time</h3>
                     <h4 className='text-lg font-bold mt-2 mb-4'>Front-End Engineer (React & Redux)</h4>
                     <p className='flex-grow'>Join our team as a Front-End Developer to join our team in sunny Miami, FL. We are looking  for a motivated...</p>
@@ -36,12 +36,12 @@ const JobListings = () => {
                             <span><MdLocationOn /></span>
                             <span>Miami, FL</span>
                         </div>
-                        <button type="submit" className='border-1 bg-indigo-500 rounded-lg px-4 py-2 text-white hover:bg-indigo-600'>
+                        <button type="submit" className='bg-indigo-500 rounded-lg px-4 py-2 text-white hover:bg-indigo-600'>
                             Read More
                         </button>
                     </section>
                 </section>
-                <section className='border-2 bg-white px-3 py-4 rounded-lg shadow-md flex flex-col'>
+                <section className='bg-white px-3 py-4 rounded-lg shadow-md flex flex-col'>
                     <h3 className='text-gray-400'>Full-Time</h3>
                     <h4 className='text-lg font-bold mt-2 mb-4'>React.js Developer</h4>
                     <p className='flex-grow'>Are you passionate about front-end development? Join our team in vibrant Brooklyn, NY, and...</p>
@@ -53,7 +53,7 @@ const JobListings = () => {
                             <span><MdLocationOn /></span>
                             <span>Brooklyn, NY</span>
                         </div>
-                        <button type="submit" className='border-1 bg-indigo-500 rounded-lg px-4 py-2 text-white hover:bg-indigo-600'>
+                        <button type="submit" className='bg-indigo-500 rounded-lg px-4 py-2 text-white hover:bg-indigo-600'>
                             Read More
                         </button>
                     </section>
