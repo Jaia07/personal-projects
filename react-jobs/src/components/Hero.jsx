@@ -11,7 +11,7 @@ const Hero = ({
             <h1 className='text-center text-white font-bold text-3xl sm:text-4xl md:text-5xl'>
               {title}
             </h1>
-            <p className='text-center text-white text-sm md:text-lg py-2 tracking-tighter'>
+            <p className='text-center text-white text-sm md:text-lg py-2'>
               {subtitle}
             </p>
           </div>

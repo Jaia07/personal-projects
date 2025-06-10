@@ -14,12 +14,12 @@ const JobListings = () => {
                     <p className='text-indigo-500 mb-4'>More</p>
                     <span className='text-indigo-500'>$70k - $80k/Year</span>
                     <span className='border-t block border-gray-100 rounded-md my-1'></span>
-                    <section className='flex items-center justify-between mt-auto'>
-                        <div className='flex items-center justify-center gap-1 text-red-600 my-4'>
-                            <span><MdLocationOn /></span>
+                    <section className='flex flex-col sm:flex-row items-start sm:items-center justify-between mt-auto mb-4'>
+                        <div className='flex items sm:items-center justify-center gap-1 text-red-600 my-4'>
+                            <span className='hidden sm:block'><MdLocationOn /></span>
                             <span>Boston, MA</span>
                         </div>
-                        <button type="submit" className='bg-indigo-500 rounded-lg px-4 py-2 text-white hover:bg-indigo-600'>
+                        <button type="submit" className='bg-indigo-500 rounded-lg px-4 py-2 text-white hover:bg-indigo-600 w-full'>
                             Read More
                         </button>
                     </section>
@@ -31,12 +31,12 @@ const JobListings = () => {
                     <p className='text-indigo-500 mb-4'>More</p>
                     <span className='text-indigo-500'>$70k - $80k/Year</span>
                     <span className='border-t block border-gray-100 rounded-md my-1'></span>
-                    <section className='flex items-center justify-between mt-auto'>
-                        <div className='flex items-center justify-center gap-1 text-red-600 my-4'>
-                            <span><MdLocationOn /></span>
+                    <section className='flex flex-col sm:flex-row items-start sm:items-center justify-between mt-auto mb-4'>
+                        <div className='flex items sm:items-center justify-center gap-1 text-red-600 my-4'>
+                            <span className='hidden sm:block'><MdLocationOn /></span>
                             <span>Miami, FL</span>
                         </div>
-                        <button type="submit" className='bg-indigo-500 rounded-lg px-4 py-2 text-white hover:bg-indigo-600'>
+                        <button type="submit" className='bg-indigo-500 rounded-lg px-4 py-2 text-white hover:bg-indigo-600 w-full'>
                             Read More
                         </button>
                     </section>
@@ -48,12 +48,12 @@ const JobListings = () => {
                     <p className='text-indigo-500 mb-4'>More</p>
                     <span className='text-indigo-500'>$70k - $80k/Year</span>
                     <span className='border-t block border-gray-100 rounded-md my-1'></span>
-                    <section className='flex items-center justify-between mt-auto'>
-                        <div className='flex items-center justify-center gap-1 text-red-600 my-4'>
-                            <span><MdLocationOn /></span>
+                    <section className='flex flex-col sm:flex-row items-start sm:items-center justify-between mt-auto mb-4'>
+                        <div className='flex items sm:items-center justify-center gap-1 text-red-600 my-4'>
+                            <span className='hidden sm:block'><MdLocationOn /></span>
                             <span>Brooklyn, NY</span>
                         </div>
-                        <button type="submit" className='bg-indigo-500 rounded-lg px-4 py-2 text-white hover:bg-indigo-600'>
+                        <button type="submit" className='bg-indigo-500 rounded-lg px-4 py-2 text-white hover:bg-indigo-600 w-full'>
                             Read More
                         </button>
                     </section>
