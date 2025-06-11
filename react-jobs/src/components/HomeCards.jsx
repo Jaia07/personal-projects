@@ -9,18 +9,24 @@ const HomeCards = () => {
           For Developers
         </h2>
         <p className='mt-2 mb-4'>Browse our React jobs and start your career today</p>
-        <button type="submit" className='bg-black rounded-lg px-4 py-2 text-white hover:bg-gray-700'>
+        <a 
+        href="/jobs"
+        className='bg-black rounded-lg px-4 py-2 text-white hover:bg-gray-700'
+        >
           Browse jobs
-        </button>
+        </a>
       </Card>
       <Card bg='bg-indigo-100'>
         <h2 className='font-bold text-2xl'>
           For Employers
         </h2>
         <p className='mt-2 mb-4'>List your job to find the perfect developer for the role</p>
-        <button type="submit" className='bg-indigo-500 rounded-lg px-4 py-2 text-white hover:bg-indigo-600'>
+        <a 
+        href="/jobs"
+        className='bg-indigo-500 rounded-lg px-4 py-2 text-white hover:bg-indigo-600'
+        >
           Add job
-        </button>
+        </a>
       </Card>
     </div>
   )
