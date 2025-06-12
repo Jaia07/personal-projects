@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../assets/images/logo.png'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -16,9 +17,9 @@ const Navbar = () => {
             </section>
             <section className='flex items-center justify-between p-2'>
               <ul className='flex gap-2 md:gap-4 text-white'>
-                <li className='p-2 hover:bg-black rounded-md'><a href="#">Home</a></li>
-                <li className='p-2 hover:bg-black rounded-md'><a href="#">Jobs</a></li>
-                <li className='p-2 hover:bg-black rounded-md'><a href="#">Add Job</a></li>
+                <li className='p-2 hover:bg-black rounded-md'><Link to='/'>Home</Link></li>
+                <li className='p-2 hover:bg-black rounded-md'><Link to='/jobs'>Jobs</Link></li>
+                <li className='p-2 hover:bg-black rounded-md'><Link to='/add-job'>Add Job</Link></li>
               </ul>
             </section>
           </div>
