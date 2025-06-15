@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { MdLocationOn } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -38,7 +37,7 @@ const JobListing = ({ job }) => {
           <span>{job.location}</span>
         </div>
         <Link
-          href={`/job/${job.id}`}
+          to={`/jobs/${job.id}`}
           className="bg-indigo-500 rounded-lg px-4 py-2 text-white hover:bg-indigo-600 w-full sm:w-auto"
         >
           Read More
