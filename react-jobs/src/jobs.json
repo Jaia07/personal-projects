@@ -85,29 +85,15 @@
       }
     },
     {
-      "id": "322f",
-      "title": "Testing Job",
+      "id": "7d38",
+      "title": "Test job 1",
       "type": "Remote",
-      "location": "Lekki, LA",
-      "description": "This is a test",
-      "salary": "$60K - 70K",
+      "description": "This is a test job",
+      "location": "Lagos, Nigeria",
+      "salary": "$80K - 90K",
       "company": {
         "name": "Jhay's Designs",
-        "description": "Develop beautiful sites",
-        "contactEmail": "josephadebanjo4@gmail.com",
-        "contactPhone": "08068982422"
-      }
-    },
-    {
-      "id": "dfc6",
-      "title": "Testing 2",
-      "type": "Internship",
-      "location": "Lekki, LA",
-      "description": "This is test 2",
-      "salary": "Over $200K",
-      "company": {
-        "name": "Jhay's Designs",
-        "description": "Develop even more beautiful web solutions",
+        "description": "Design beautifully",
         "contactEmail": "josephadebanjo4@gmail.com",
         "contactPhone": "08068982422"
       }

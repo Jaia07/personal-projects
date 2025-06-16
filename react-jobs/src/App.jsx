@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import { Routes, Route } from "react-router-dom";
@@ -6,8 +5,11 @@ import JobsPage from "./pages/JobsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import JobPage from "./pages/JobPage";
 import AddJobPage from "./pages/AddJobPage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
+  //Add Job
   const addJob = async (newJob) => {
     const res = await fetch("/api/jobs", {
       method: "POST",
@@ -19,16 +21,24 @@ const App = () => {
     return;
   };
 
+  //Delete Job
+  const deleteJob = async (jobId) => {
+    const res = await fetch(`/api/jobs/${jobId}`, {
+      method: "DELETE",
+    });
+  };
+
   return (
     <>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/jobs" element={<JobsPage />} />
-        <Route path="/jobs/:id" element={<JobPage />} />
         <Route path="/add-job" element={<AddJobPage addNewJob={addJob} />} />
+        <Route path="/jobs/:id" element={<JobPage deleteJob={deleteJob} />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <ToastContainer />
     </>
   );
 };
