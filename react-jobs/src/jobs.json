@@ -83,6 +83,34 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "322f",
+      "title": "Testing Job",
+      "type": "Remote",
+      "location": "Lekki, LA",
+      "description": "This is a test",
+      "salary": "$60K - 70K",
+      "company": {
+        "name": "Jhay's Designs",
+        "description": "Develop beautiful sites",
+        "contactEmail": "josephadebanjo4@gmail.com",
+        "contactPhone": "08068982422"
+      }
+    },
+    {
+      "id": "dfc6",
+      "title": "Testing 2",
+      "type": "Internship",
+      "location": "Lekki, LA",
+      "description": "This is test 2",
+      "salary": "Over $200K",
+      "company": {
+        "name": "Jhay's Designs",
+        "description": "Develop even more beautiful web solutions",
+        "contactEmail": "josephadebanjo4@gmail.com",
+        "contactPhone": "08068982422"
+      }
     }
   ]
 }
