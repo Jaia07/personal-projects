@@ -83,20 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "id": "7d38",
-      "title": "Test job 1",
-      "type": "Part-Time",
-      "description": "This is a test job for editing",
-      "location": "Crossriver, CL",
-      "salary": "$90K - 100K",
-      "company": {
-        "name": "Jhay's Designs",
-        "description": "Design beautifully",
-        "contactEmail": "josephadebanjo4@gmail.com",
-        "contactPhone": "08068982422"
-      }
     }
   ]
 }
