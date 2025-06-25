@@ -1,26 +1,23 @@
-import React from 'react'
-import './App.css'
-import Header from './components/Header'
-import Services from './components/Services'
-import Testimonial from './components/Testimonial'
-import About from './components/About'
-import Questions from './components/Questions'
-import Footer from './components/Footer'
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import NotFoundPage from "./pages/NotFoundPage";
+import AboutPage from "./pages/AboutPage";
+import ServicesPage from "./pages/ServicesPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
-
   return (
     <>
-      <div>
-        <Header />
-        <Services />
-        <Testimonial />
-        <About />
-        <Questions />
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
