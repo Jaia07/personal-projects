@@ -1,7 +1,31 @@
 import Fire_Emoji from "../assets/images/fire.png";
 import MovieCard from "./MovieCard";
+import Spinner from "./Spinner";
+import { useState, useEffect } from "react";
 
 const MovieList = () => {
+  const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const api_key =
+    "https://api.themoviedb.org/3/movie/popular?api_key=82aa7d0e7a88d000b080f8a9c4ca0c10";
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        let res = await fetch(api_key);
+        let data = await res.json();
+        setMovies(data.results);
+      } catch (error) {
+        console.log("Error Fetching Data", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMovies();
+  }, []);
+
   return (
     <>
       <section className="w-full px-4 py-3 mb-2">
@@ -44,9 +68,15 @@ const MovieList = () => {
           </div>
         </header>
 
-        <div className="flex flex-wrap justify-evenly">
-          <MovieCard />
-        </div>
+        {loading ? (
+          <Spinner loading={loading} />
+        ) : (
+          <div className="flex flex-wrap justify-evenly">
+            {movies.map((movie) => (
+              <MovieCard key={movie.id} movie={movie} />
+            ))}
+          </div>
+        )}
       </section>
     </>
   );
