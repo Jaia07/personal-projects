@@ -5,7 +5,9 @@ import { useState, useEffect } from "react";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
+  const [filterMovies, setFilterMovies] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [minRating, setMinRating] = useState(0);
 
   const api_key =
     "https://api.themoviedb.org/3/movie/popular?api_key=82aa7d0e7a88d000b080f8a9c4ca0c10";
@@ -16,6 +18,7 @@ const MovieList = () => {
         let res = await fetch(api_key);
         let data = await res.json();
         setMovies(data.results);
+        setFilterMovies(data.results);
       } catch (error) {
         console.log("Error Fetching Data", error);
       } finally {
@@ -25,6 +28,21 @@ const MovieList = () => {
 
     fetchMovies();
   }, []);
+
+  const handleFilter = (rate) => {
+    if (rate === minRating) {
+      setMinRating(0);
+      setFilterMovies(movies);
+    } else {
+      setMinRating(rate);
+
+      const filtered = movies.filter((movie) => movie.vote_average >= rate);
+      setFilterMovies(filtered);
+    }
+  };
+
+  const selected =
+    "py-1 px-1 whitespace-nowrap cursor-pointer border-b-2 border-b-gray-500";
 
   return (
     <>
@@ -37,13 +55,34 @@ const MovieList = () => {
 
           <div className="flex items-center justify-between">
             <ul className="flex items-center justify-center mr-2 gap-1">
-              <li className="py-1 px-1 whitespace-nowrap cursor-pointer">
+              <li
+                className={
+                  minRating === 8
+                    ? selected
+                    : "py-1 px-1 whitespace-nowrap cursor-pointer"
+                }
+                onClick={() => handleFilter(8)}
+              >
                 8+ Star
               </li>
-              <li className="py-1 px-1 whitespace-nowrap cursor-pointer">
+              <li
+                className={
+                  minRating === 7
+                    ? selected
+                    : "py-1 px-1 whitespace-nowrap cursor-pointer"
+                }
+                onClick={() => handleFilter(7)}
+              >
                 7+ Star
               </li>
-              <li className="py-1 px-1 whitespace-nowrap cursor-pointer">
+              <li
+                className={
+                  minRating === 6
+                    ? selected
+                    : "py-1 px-1 whitespace-nowrap cursor-pointer"
+                }
+                onClick={() => handleFilter(6)}
+              >
                 6+ Star
               </li>
             </ul>
@@ -72,7 +111,7 @@ const MovieList = () => {
           <Spinner loading={loading} />
         ) : (
           <div className="flex flex-wrap justify-evenly">
-            {movies.map((movie) => (
+            {filterMovies.map((movie) => (
               <MovieCard key={movie.id} movie={movie} />
             ))}
           </div>

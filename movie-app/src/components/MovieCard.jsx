@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
 import Star from "../assets/images/star.png";
 
 const MovieCard = ({ movie }) => {
   return (
     <a
-      href="#"
+      href={`https://www.themoviedb.org/movie/${movie.id}`}
+      target="_blank"
       className="relative w-48 h-[300px] m-4 overflow-hidden rounded-xl text-white shadow-lg transform transition-all duration-300 ease-in-out hover:scale-110"
     >
       <img
@@ -18,11 +18,11 @@ const MovieCard = ({ movie }) => {
         <div className="flex items-center justify-between text-sm font-medium my-1.5 text-[#ffe400]">
           <p>{movie.release_date}</p>
           <p className="flex items-center">
-            {movie.rate_average}
+            {movie.vote_average}
             <img src={Star} alt="rating icon" className="w-5 h-5 ml-1.5" />
           </p>
         </div>
-        <p className="text-sm italic">{movie.overview}</p>
+        <p className="text-sm italic">{movie.overview.slice(0, 100) + "..."}</p>
       </article>
     </a>
   );
