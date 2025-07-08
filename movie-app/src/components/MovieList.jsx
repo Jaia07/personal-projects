@@ -1,4 +1,5 @@
 import Fire_Emoji from "../assets/images/fire.png";
+import FilteredMovieList from "./FilteredMovieList";
 import MovieCard from "./MovieCard";
 import Spinner from "./Spinner";
 import { useState, useEffect } from "react";
@@ -41,9 +42,6 @@ const MovieList = () => {
     }
   };
 
-  const selected =
-    "py-1 px-1 whitespace-nowrap cursor-pointer border-b-2 border-b-gray-500";
-
   return (
     <>
       <section className="w-full px-4 py-3 mb-2">
@@ -54,38 +52,11 @@ const MovieList = () => {
           </h2>
 
           <div className="flex items-center justify-between">
-            <ul className="flex items-center justify-center mr-2 gap-1">
-              <li
-                className={
-                  minRating === 8
-                    ? selected
-                    : "py-1 px-1 whitespace-nowrap cursor-pointer"
-                }
-                onClick={() => handleFilter(8)}
-              >
-                8+ Star
-              </li>
-              <li
-                className={
-                  minRating === 7
-                    ? selected
-                    : "py-1 px-1 whitespace-nowrap cursor-pointer"
-                }
-                onClick={() => handleFilter(7)}
-              >
-                7+ Star
-              </li>
-              <li
-                className={
-                  minRating === 6
-                    ? selected
-                    : "py-1 px-1 whitespace-nowrap cursor-pointer"
-                }
-                onClick={() => handleFilter(6)}
-              >
-                6+ Star
-              </li>
-            </ul>
+            <FilteredMovieList
+              minRating={minRating}
+              onRatingClick={handleFilter}
+              ratings={[8, 7, 6, 5]}
+            />
 
             <select
               name=""
