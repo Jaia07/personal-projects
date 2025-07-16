@@ -1,11 +1,10 @@
-import Fire_Emoji from "../assets/images/fire.png";
 import FilteredMovieList from "./FilteredMovieList";
 import MovieCard from "./MovieCard";
 import Spinner from "./Spinner";
 import { useState, useEffect } from "react";
 import _ from "lodash";
 
-const MovieList = () => {
+const MovieList = ({ type, title, emoji }) => {
   const [movies, setMovies] = useState([]);
   const [filterMovies, setFilterMovies] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -15,8 +14,7 @@ const MovieList = () => {
     order: "asc",
   });
 
-  const api_key =
-    "https://api.themoviedb.org/3/movie/popular?api_key=82aa7d0e7a88d000b080f8a9c4ca0c10";
+  const api_key = `https://api.themoviedb.org/3/movie/${type}?api_key=82aa7d0e7a88d000b080f8a9c4ca0c10`;
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -61,11 +59,15 @@ const MovieList = () => {
 
   return (
     <>
-      <section className="w-full px-4 py-3 mb-2">
+      <section className="w-full px-4 py-3 mb-6" id={type}>
         <header className="flex items-center justify-between max-w-7xl mx-auto mb-4">
           <h2 className="flex items-center text-2xl text-[#ffe400] font-semibold">
-            Popular{" "}
-            <img className="size-6 ml-1" src={Fire_Emoji} alt="Fire Emoji" />
+            {title}{" "}
+            <img
+              className="size-6 ml-1"
+              src={`${emoji}`}
+              alt={`${emoji} Emoji`}
+            />
           </h2>
 
           <div className="flex items-center justify-between">

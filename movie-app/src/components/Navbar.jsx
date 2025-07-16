@@ -12,7 +12,10 @@ const Navbar = () => {
           </h1>
           <ul className="flex items-center justify-between gap-5">
             <li>
-              <a href="#" className="flex items-center text-[20px] font-medium">
+              <a
+                href="#popular"
+                className="flex items-center text-[20px] font-medium"
+              >
                 Popular{" "}
                 <img
                   className="size-6 ml-1"
@@ -22,7 +25,10 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="flex items-center text-[20px] font-medium">
+              <a
+                href="#top_rated"
+                className="flex items-center text-[20px] font-medium"
+              >
                 Top Rated{" "}
                 <img
                   className="size-6 ml-1"
@@ -32,7 +38,10 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="flex items-center text-[20px] font-medium">
+              <a
+                href="#upcoming"
+                className="flex items-center text-[20px] font-medium"
+              >
                 Upcoming{" "}
                 <img
                   className="size-6 ml-1"
