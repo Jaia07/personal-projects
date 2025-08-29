@@ -8,6 +8,7 @@ const Projects = () => {
   useEffect(() => {
     const updateCardsToShow = () => {
       if (window.innerWidth >= 1024) {
+        // Show all cards on larger screens
         setCardsToShow(projectsData.length);
       } else {
         setCardsToShow(1);
@@ -84,7 +85,8 @@ const Projects = () => {
                     {project.title}
                   </h2>
                   <p className="text-gray-500 text-sm">
-                    {project.price} <span>|</span> {project.location}
+                    {project.price} <span className="px-1">|</span>{" "}
+                    {project.location}
                   </p>
                 </div>
               </div>
