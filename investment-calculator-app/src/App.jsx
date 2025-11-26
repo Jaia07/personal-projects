@@ -12,11 +12,13 @@ function App() {
     duration: 10,
   });
 
+  const inputIsValid = userInput.duration > 0;
+
   const handleUserInput = (inputIdentifier, newValue) => {
     setUserInput((prevUserInput) => {
       return {
         ...prevUserInput,
-        [inputIdentifier]: Number(newValue),
+        [inputIdentifier]: Number(newValue), //converts the string input from user input to number
       };
     });
   };
@@ -25,7 +27,10 @@ function App() {
     <>
       <Header />
       <UserInput userInput={userInput} onChangeUserInput={handleUserInput} />
-      <Results input={userInput} />
+      {!inputIsValid && (
+        <p className="center">Please enter a duration greater than zero.</p>
+      )}
+      {inputIsValid && <Results input={userInput} />}
     </>
   );
 }
